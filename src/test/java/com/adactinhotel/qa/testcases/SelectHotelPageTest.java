@@ -8,12 +8,14 @@ import org.testng.annotations.Test;
 import com.adactinhotel.qa.base.TestBase;
 import com.adactinhotel.qa.pages.LoginPage;
 import com.adactinhotel.qa.pages.SearchHotelPage;
+import com.adactinhotel.qa.pages.SelectHotelPage;
 
-public class SearchHotelTest extends TestBase {
+public class SelectHotelPageTest extends TestBase {
 	LoginPage loginPage;
 	SearchHotelPage searchHotelPage;
+	SelectHotelPage selectHotelPage;
 
-	public SearchHotelTest() {
+	public SelectHotelPageTest() {
 		super(); // call the test base class constructor
 	}
 
@@ -23,26 +25,25 @@ public class SearchHotelTest extends TestBase {
 		loginPage = new LoginPage(); // to access the login page class methods
 		searchHotelPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password")); // to access
 																										// login method
-	}
-
-	@Test(priority = 1)
-	public void searchHotelPageTitleTest() {
-		String title = searchHotelPage.validateSearchHotelPageTitle();
-		Assert.assertEquals(title, "Adactin.com - Search Hotel");
-	}
-	
-	@Test(priority = 1)
-	public void userName() {
-		boolean flag = searchHotelPage.verifyCorrectUserName();
-		Assert.assertTrue(flag);
-	}
-
-	@Test(priority = 2)
-	public void selectvalues() {
+		searchHotelPage = new SearchHotelPage();
+		selectHotelPage = new SelectHotelPage();
 		searchHotelPage.select_locationviadropdown();
 		searchHotelPage.select_hotelviadropdown();
 		searchHotelPage.select_roomtypeviadropdown();
 		searchHotelPage.submit();
+
+	}
+
+	@Test(priority = 1)
+	public void selectHotelPageTitleTest() {
+		String title = selectHotelPage.validateSelectHotelPageTitle();
+		Assert.assertEquals(title, "Adactin.com - Select Hotel");
+	}
+
+	@Test(priority = 2)
+	public void selectHotelBtn() {
+		selectHotelPage.selectHotel();
+		selectHotelPage.submit();
 	}
 
 	@AfterMethod

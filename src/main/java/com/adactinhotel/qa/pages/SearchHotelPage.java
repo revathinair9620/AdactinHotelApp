@@ -28,7 +28,7 @@ public class SearchHotelPage extends TestBase {
 	public SearchHotelPage() {
 		PageFactory.initElements(driver, this);
 	}
-
+    //Actions
 	public String validateSearchHotelPageTitle() {
 		return driver.getTitle();
 	}
