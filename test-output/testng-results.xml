@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-04T01:37:49Z" name="Default suite" finished-at="2024-03-04T01:37:56Z" duration-ms="7326">
+    <groups>
+    </groups>
+    <test started-at="2024-03-04T01:37:49Z" name="Default test" finished-at="2024-03-04T01:37:56Z" duration-ms="7326">
+      <class name="com.adactinhotel.qa.testcases.SearchHotelTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:49Z" name="setUp" finished-at="2024-03-04T01:37:52Z" duration-ms="3048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="selectHotelPageTitleTest()[pri:1, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:52Z" name="selectHotelPageTitleTest" finished-at="2024-03-04T01:37:52Z" duration-ms="170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectHotelPageTitleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:52Z" name="tearDown" finished-at="2024-03-04T01:37:52Z" duration-ms="366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:52Z" name="setUp" finished-at="2024-03-04T01:37:55Z" duration-ms="2408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="selectvalues()[pri:2, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:55Z" name="selectvalues" finished-at="2024-03-04T01:37:56Z" duration-ms="1043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectvalues -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.adactinhotel.qa.testcases.SearchHotelTest@78d6692f]" started-at="2024-03-04T01:37:56Z" name="tearDown" finished-at="2024-03-04T01:37:56Z" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.adactinhotel.qa.testcases.SearchHotelTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
