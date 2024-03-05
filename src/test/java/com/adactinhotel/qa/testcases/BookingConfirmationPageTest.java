@@ -7,19 +7,19 @@ import org.testng.annotations.Test;
 
 import com.adactinhotel.qa.base.TestBase;
 import com.adactinhotel.qa.pages.BookAHotelPage;
+import com.adactinhotel.qa.pages.BookingConfirmationPage;
 import com.adactinhotel.qa.pages.LoginPage;
 import com.adactinhotel.qa.pages.SearchHotelPage;
 import com.adactinhotel.qa.pages.SelectHotelPage;
 
-public class BookAHotelPageTest extends TestBase {
-
+public class BookingConfirmationPageTest extends TestBase {
 	LoginPage loginPage;
 	SearchHotelPage searchHotelPage;
 	SelectHotelPage selectHotelPage;
 	BookAHotelPage bookAHotelPage;
-	
+	BookingConfirmationPage bookingConfirmationPage;
 
-	public BookAHotelPageTest() {
+	public BookingConfirmationPageTest() {
 		super(); // call the test base class constructor
 	}
 
@@ -32,29 +32,30 @@ public class BookAHotelPageTest extends TestBase {
 		searchHotelPage = new SearchHotelPage();
 		selectHotelPage = new SelectHotelPage();
 		bookAHotelPage = new BookAHotelPage();
+		bookingConfirmationPage = new BookingConfirmationPage();
 		searchHotelPage.select_locationviadropdown();
 		searchHotelPage.select_hotelviadropdown();
 		searchHotelPage.select_roomtypeviadropdown();
 		searchHotelPage.submit();
 		selectHotelPage.selectHotel();
 		selectHotelPage.submit();
+		bookAHotelPage.enterBookingDetails();
+		bookAHotelPage.select_creditCardDetails();
+		bookAHotelPage.submit();
 	}
 
 	@Test
-	public void bookAHotelPageTitleTest() {
-		String title = bookAHotelPage.validateBookAHotelPageTitle();
+	public void bookingConfirmationPageTitleTest() {
+		String title = bookingConfirmationPage.validateBookConfirmationTitle();
 		Assert.assertEquals(title, "Adactin.com - Book A Hotel");
 	}
 
 	@Test
-	public void userDetailsTest() {
-		bookAHotelPage.enterBookingDetails();
+	public void OrderNoTest() {
+		boolean flag = bookingConfirmationPage.validateOderNo();
+		Assert.assertTrue(flag);
 	}
-	
-	@Test
-	public void ceritcardDetailsTest() {
-		bookAHotelPage.select_creditCardDetails();
-	}
+
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

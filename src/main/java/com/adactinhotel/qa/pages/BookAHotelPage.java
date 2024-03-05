@@ -52,8 +52,7 @@ public class BookAHotelPage extends TestBase {
 		address.sendKeys("32-34 mons road");
 		creditcardno.sendKeys("1234567890123456");
 		cvvno.sendKeys("123");
-		//return new BookingConfirmationPage();
-		
+
 	}
 
 	public void select_creditCardDetails() {
@@ -65,7 +64,6 @@ public class BookAHotelPage extends TestBase {
 		expiryyear.selectByValue("2027");
 	}
 
-	
 	public BookingConfirmationPage submit() {
 		bookNowBtn.click();
 		return new BookingConfirmationPage();
