@@ -55,6 +55,11 @@ public class BookingConfirmationPageTest extends TestBase {
 		boolean flag = bookingConfirmationPage.validateOderNo();
 		Assert.assertTrue(flag);
 	}
+	
+	@Test
+	public void MyItinerary() {
+		bookingConfirmationPage.myItinerary();
+	}
 
 	@AfterMethod
 	public void tearDown() {

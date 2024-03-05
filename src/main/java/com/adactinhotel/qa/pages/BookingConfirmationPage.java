@@ -33,5 +33,10 @@ public class BookingConfirmationPage extends TestBase {
 	public boolean validateOderNo() {
 		return orderNo.isDisplayed();
 	}
+	
+	public BookingConfirmationPage myItinerary() {
+		myItinerary.click();
+		return new BookingConfirmationPage();
+	}
 
 }
