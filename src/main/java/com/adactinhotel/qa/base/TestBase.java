@@ -25,7 +25,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream("C:\\Users\\Sam\\eclipse-workspace\\AdactinHotel\\src\\main\\java\\com\\adactinhotel\\"
-					+ "qa\\config\\config.properties");
+					+ "qa\\config\\config.properties"); //loc of config prop file
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

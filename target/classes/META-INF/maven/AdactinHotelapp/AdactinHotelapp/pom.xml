@@ -61,5 +61,10 @@
 			6.14.3</version>
             <scope>compile</scope> 
             </dependency>
+		<dependency>
+			<groupId>Demo</groupId>
+			<artifactId>DemoMaven</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
   </dependencies>
 </project>
