@@ -25,7 +25,7 @@ public class SelectHotelPageTest extends TestBase {
 		loginPage = new LoginPage(); // to access the login page class methods
 		searchHotelPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password")); // to access
 																										// login method
-		searchHotelPage = new SearchHotelPage();
+		//searchHotelPage = new SearchHotelPage();
 		selectHotelPage = new SelectHotelPage();
 		searchHotelPage.select_locationviadropdown();
 		searchHotelPage.select_hotelviadropdown();

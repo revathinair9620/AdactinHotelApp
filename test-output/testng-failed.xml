@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.adactinhotel.qa.testcases.BookingConfirmationPageTest">
+      <class name="com.adactinhotel.qa.testcases.BookAHotelPageTest">
         <methods>
-          <include name="bookingConfirmationPageTitleTest"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="bookAHotelPageTitleTest"/>
+          <include name="userDetailsTest"/>
+          <include name="ceritcardDetailsTest"/>
         </methods>
-      </class> <!-- com.adactinhotel.qa.testcases.BookingConfirmationPageTest -->
+      </class> <!-- com.adactinhotel.qa.testcases.BookAHotelPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
